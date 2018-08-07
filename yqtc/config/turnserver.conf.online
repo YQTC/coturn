@@ -1,0 +1,48 @@
+
+# server
+listening-port=3478
+#listening-ip=10.135.80.251
+alt-listening-port=0
+alt-tls-listening-port=3479
+tls-listening-port=3500
+#cli-port=7004
+#relay-ip=10.135.80.251
+relay-device=eth0
+relay-ip=172.19.83.241
+relay-threads=2
+external-ip=47.100.119.151
+
+realm=api.yqtc.co
+# server-name={YOUR_SERVER_NAME}
+log-file=/home/work/turnserver/turnserver.log
+simple-log
+mobility
+#no-tlsv1
+#no-tlsv1_1
+#no-cli
+verbose
+fingerprint
+
+min-port=40000
+max-port=50000
+# auth
+lt-cred-mech
+#no-auth
+stale-nonce=3600
+cert=/home/work/turnserver/iamtest.yqtc.co_7002_ssl.crt
+pkey=/home/work/turnserver/iamtest.yqtc.co_7002_key.txt
+# user
+#redis-userdb="ip=<172.19.160.33>  port=<8379> connect_timeout=<30>"
+#mysql-userdb="host=47.100.119.151:8379 dbname=coturn user=root password=act2141c88154edae3c172 connect_timeout=30 read_timeout=30"
+# userdb=/opt/var/db/turndb
+use-auth-secret
+user=guest3:guest3
+user=guest4
+static-auth-secret=secret1
+# use real-valid certificate/privatekey files
+# cert=/opt/etc/ssl/turn_server_cert.pem
+# pkey=/opt/etc/ssl/turn_server_pkey.pemi
+
+#static-auth-secret=KSuSNqpx3XWDiFdRKxrJFy7GBa9drsWvg5HMVipOvc9rJLsr20OCqDQdUzPGT0AJ
+server-name=iamtest
+#realm=iamtest.yqtc.co
