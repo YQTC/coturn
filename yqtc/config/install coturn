@@ -1,0 +1,34 @@
+
+
+
+
+
+1. install coturn
+https://zhuanlan.zhihu.com/p/32093871
+# deps
+apt-get install -y \
+    emacs-nox \
+    build-essential \
+    libssl-dev sqlite3 \
+    libsqlite3-dev \
+    libevent-dev \
+    g++ \
+    libboost-dev \
+    libevent-dev
+
+# download
+wget https://github.com/coturn/coturn/archive/4.5.0.7.tar.gz
+tar xvf 4.5.0.7.tar.gz
+
+# build & install
+cd coturn-4.5.0.7
+./configure --prefix=/opt
+make
+make install
+
+# env
+echo "export PATH=/opt/bin:$PATH" >> ~/.bashrc
+source ~/.bashrc
+
+2.configure
+    turnserver.conf.online
