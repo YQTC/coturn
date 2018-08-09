@@ -19,10 +19,10 @@ mobility
 #no-tlsv1
 #no-tlsv1_1
 #no-cli
-#verbose
+verbose
 #fingerprint
-
-min-port=40000
+#这里需要打开防火钱才能生效
+min-port=45000
 max-port=50000
 # auth
 lt-cred-mech
@@ -32,7 +32,7 @@ cert=/home/work/turnserver/iamtest.yqtc.co_7002_ssl.crt
 pkey=/home/work/turnserver/iamtest.yqtc.co_7002_key.txt
 # user
 # 这里是演示，不配置数据库，通过 use={name}:{password} 方式配置
-mysql-userdb="host=139.199.180.239 dbname=coturn user=root password=yqtc connect_timeout=30 read_timeout=30"
+#mysql-userdb="host=139.199.180.239 dbname=coturn user=root password=yqtc connect_timeout=30 read_timeout=30"
 # userdb=/opt/var/db/turndb
 # 多用户则写多行
 #use-auth-secret
