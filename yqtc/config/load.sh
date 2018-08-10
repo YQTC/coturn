@@ -1,1 +1,0 @@
-nohup sudo /opt/bin/turnserver  > /dev/null &
